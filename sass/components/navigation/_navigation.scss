@@ -1,6 +1,7 @@
 .main-navigation {
 	display: block;
 	width: 100%;
+	
 
 	ul {
 		display: none;
@@ -106,4 +107,11 @@
 		text-align: end;
 		flex: 1 0 50%;
 	}
+}
+
+.site-header{
+	background-color: $color__text-input-focus;
+}
+.site-footer{
+	background-color: $color__text-input-focus;
 }
