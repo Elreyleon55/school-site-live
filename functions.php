@@ -189,3 +189,14 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Enqueue scripts and styles.
+ */
+function fwd_scripts() {
+	wp_enqueue_style(
+		'fwd-googlefonts', // unique handle
+		'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap',
+		array(), 
+		null // version number, for google Fonts always set to null
+	);
+}
