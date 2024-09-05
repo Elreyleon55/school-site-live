@@ -1,4 +1,5 @@
 <?php
+//making a change
 /**
  * The template for displaying the footer
  *
