@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package School_site
+ * @package SCH_School_Theme
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -81,6 +81,19 @@ function school_theme_setup() {
 			)
 		)
 	);
+
+	// Change Excerpt Length to 20 words 
+function fwd_excerpt_length($length){
+	return 20;
+}
+add_filter( 'excerpt_length', 'fwd_excerpt_length', 999 );
+
+// Change the excerpt "more" text
+function fwd_excerpt_more( $more ) {
+    $more = '... <a class="read-more" href="' . esc_url(get_permalink()) . '">Continue Reading</a>';
+    return $more;
+}
+add_filter( 'excerpt_more', 'fwd_excerpt_more', 999 );
 
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'customize-selective-refresh-widgets' );
