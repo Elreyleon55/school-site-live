@@ -205,6 +205,7 @@ get_header();
 <?php
 get_footer();
 
+?>
 <main id="primary" class="site-main">
 
     <?php
