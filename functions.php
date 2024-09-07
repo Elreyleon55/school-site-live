@@ -203,4 +203,15 @@ function fwd_scripts() {
 		array(), 
 		null // version number, for google Fonts always set to null
 	);
+	
+//add quote for later
+// 	if (is_singular('post')) {
+// 		// Enqueue your CSS file
+// 		wp_enqueue_style('custom-post-css', get_template_directory_uri() . '/sass/css/_styles.scss');
+
+// 		// Enqueue your JS file
+// 		wp_enqueue_script('custom-post-js', get_template_directory_uri() . '/js/custom-post.js', array(), null, true);
+// }
+
 }
+add_action( 'wp_enqueue_scripts', 'fwd_scripts' );
