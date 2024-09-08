@@ -1,47 +1,58 @@
 <?php
-/**
- * The template for displaying the Staff Page
- *
- * @package FWD_Starter_Theme
- */
+/* Template Name: Staff Page */
+get_header(); ?>
 
-get_header();
-?>
+<main id="primary" class="site-main">
+    <h1>Our Staff</h1>
 
-	<main id="primary" class="site-main">
+    <?php
 
-		<h1>Our Staff</h1>
+    $args = array(
+        'post_type' => 'sch-staff', 
+        'posts_per_page' => -1 
+    );
 
-		<?php
+    $staff_query = new WP_Query($args);
 
-		$args = array(
-			'post_type' => 'sch-staff',
-			'posts_per_page' => -1 
-		);
+    if ($staff_query->have_posts()) :
+        while ($staff_query->have_posts()) : $staff_query->the_post(); ?>
 
-		$staff_query = new WP_Query($args);
+        
+            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <h2><?php the_title(); ?></h2>
+                
+                <?php
+                $biography = get_field('biography');
+                $courses = get_field('courses');
+                $website = get_field('instructor_website');
+                ?>
 
-		if ($staff_query->have_posts()) :
-			while ($staff_query->have_posts()) : $staff_query->the_post(); ?>
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<div class="entry-content">
-						<?php the_excerpt(); ?>
-					</div>
-					<?php if ( has_post_thumbnail() ) : ?>
-						<div class="staff-thumbnail">
-							<?php the_post_thumbnail('medium'); ?>
-						</div>
-					<?php endif; ?>
-				</article>
-			<?php endwhile;
-			wp_reset_postdata();
-		else : ?>
-			<p>No staff members found.</p>
-		<?php endif; ?>
+            
+                <?php if ( $biography ): ?>
+                    <p><strong>Biography:</strong> <?php echo $biography; ?></p>
+                <?php endif; ?>
 
-	</main><!-- #primary -->
+            
+                <?php if ( $courses ): ?>
+                    <p><strong>Courses Taught:</strong></p>
+                    <ul>
+                        <?php foreach ( $courses as $course ): ?>
+                            <li><?php echo esc_html($course['course_name']); ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                <?php endif; ?>
 
-<?php
-get_sidebar();
-get_footer();
+        
+                <?php if ( $website ): ?>
+                    <p><strong>Website:</strong> <a href="<?php echo esc_url($website); ?>" target="_blank"><?php echo esc_html($website); ?></a></p>
+                <?php endif; ?>
+            </article>
+
+        <?php endwhile;
+        wp_reset_postdata(); 
+    else: ?>
+        <p>No staff members found.</p>
+    <?php endif; ?>
+</main>
+
+<?php get_footer(); ?>
