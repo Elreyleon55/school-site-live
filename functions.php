@@ -172,7 +172,7 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/cpt-taxonomy.php';
 
 // Include the taxonomy for staff
-require get_template_directory() . '/taxonomy-sch-staff-type.php';
+require get_template_directory() . '/taxanomy-sch-staff-type.php';
 
 
 /**
