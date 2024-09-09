@@ -95,7 +95,7 @@ function fwd_register_custom_post_types() {
       'hierarchical'       => false,
       'menu_position'      => 5,
       'menu_icon'          => 'dashicons-archive',
-      'supports'           => array( 'title'),
+      'supports'           => array('title'),
   );
   register_post_type( 'sch-staff', $args );
   
