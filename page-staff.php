@@ -10,10 +10,17 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<h1>Our Staff</h1>
-
+		<article class="header-section">
+			<h1>
+			<?php 
+		the_title();
+		?>
+		</h1>
 		<?php
-
+		the_content();
+		?>
+		</article>
+		<?php
 		$args = array(
 			'post_type' => 'sch-staff',
 			'posts_per_page' => -1 
