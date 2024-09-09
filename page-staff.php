@@ -4,7 +4,6 @@
  *
  * @package FWD_Starter_Theme
  */
-
 get_header();
 ?>
 
