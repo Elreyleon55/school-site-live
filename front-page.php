@@ -23,6 +23,11 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+		<section class="container">
+			<h1>Welcome to our school</h1>
+
+		</section>
+
 		<?php
 		while ( have_posts() ) :
 			the_post();
