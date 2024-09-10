@@ -7,8 +7,6 @@
  *
  * @package FWD_Starter_Theme
 
-
-/**
  * The template for displaying the Home Page.
  *
  * @Kaleb https://developer.wordpress.org/themes/basics/template-hierarchy/
