@@ -15,42 +15,37 @@ get_header();
         <?php while ( have_posts() ) : the_post(); ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 
-                <!-- نمایش نام دانش‌آموز -->
                 <h1><?php the_title(); ?></h1>
 
-                <!-- نمایش تصویر شاخص -->
                 <?php if ( has_post_thumbnail() ) : ?>
                     <div class="student-thumbnail">
                         <?php the_post_thumbnail( 'student-thumbnail' ); ?>
                     </div>
                 <?php endif; ?>
 
-                <!-- نمایش محتوای کامل -->
                 <div class="student-content">
                     <?php the_content(); ?>
                 </div>
 
-                <!-- دکمه View Portfolio -->
                 <div class="portfolio-button">
                     <a href="#" class="button">View Portfolio</a>
                 </div>
 
-                <!-- عنوان Meet other Designer students -->
+
                 <h2>Meet other Designer students:</h2>
 
-                <!-- لینک به سایر دانش‌آموزان در همان ترم تاکسونومی -->
                 <div class="related-students">
                     <?php
-                    // دریافت ترم‌های مرتبط با پست فعلی
+
                     $terms = get_the_terms( get_the_ID(), 'sch-student-category' );
 
                     if ( $terms && ! is_wp_error( $terms ) ) {
                         foreach ( $terms as $term ) {
-                            // کوئری برای نمایش پست‌های دیگر در همان ترم تاکسونومی
+
                             $related_students_args = array(
                                 'post_type' => 'sch-student',
                                 'posts_per_page' => 3,
-                                'post__not_in' => array( get_the_ID() ), // حذف پست فعلی از نتایج
+                                'post__not_in' => array( get_the_ID() ), 
                                 'tax_query' => array(
                                     array(
                                         'taxonomy' => 'sch-student-category',
