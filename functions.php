@@ -221,3 +221,26 @@ function fwd_scripts() {
 add_action( 'wp_enqueue_scripts', 'fwd_scripts' );
 
 
+// add Block Editor template for Student CPT
+function sch_school_student_block_template() {
+
+    $post_type_object = get_post_type_object('sch-student');
+
+    if (!$post_type_object) {
+        return;
+    }
+
+    $post_type_object->template = array(
+        array( 'core/paragraph', array(
+            'placeholder' => 'Add short biography here...',
+        ) ),
+        array( 'core/button', array(
+            'text' => 'View Portfolio',
+            'url' => '#',
+        ) ),
+    );
+    
+    $post_type_object->template_lock = 'all'; // locks all blocks
+}
+add_action( 'init', 'sch_school_student_block_template' );
+

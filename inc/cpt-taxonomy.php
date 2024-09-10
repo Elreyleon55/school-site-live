@@ -48,6 +48,8 @@ function fwd_register_custom_post_types() {
       'menu_icon'          => 'dashicons-archive',
       'supports'           => array( 'title', 'thumbnail', 'editor' ),
   );
+
+  
   register_post_type( 'sch-student', $args );
 
   //regesting staff custom post types
