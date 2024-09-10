@@ -46,6 +46,12 @@ function school_theme_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+
+/*
+    * student-thumbnail size
+	*/
+	add_image_size( 'student-thumbnail', 200, 300, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(

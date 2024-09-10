@@ -30,7 +30,8 @@ get_header();
         <article>
         <a href="<?php the_permalink(); ?>">
             <h2><?php the_title(); ?></h2>
-            <?php the_post_thumbnail( 'large' ); ?>
+            <?php the_post_thumbnail( 'student-thumbnail' ); ?>
+
         </a>
         </article>
         <?php
