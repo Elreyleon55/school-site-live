@@ -9,58 +9,55 @@
 
 get_header();
 ?>
-	<main id="primary" class="site-main">
 
-	<?php
-			$terms = get_terms( 
-					array(
-							'taxonomy' => 'sch-student-category',
-					) 
-			);
-			if ( $terms && ! is_wp_error($terms) ) : ?>
-    <section>
-        <h2><?php esc_html_e( 'See Our Work', 'fwd' ); ?></h2>
-        <ul>
-        <?php foreach ( $terms as $term ) : ?>
-            <li><a href="<?php echo get_term_link( $term ); ?>"><?php echo esc_html( $term->name ); ?></a></li>
-        <?php endforeach; ?>
-        </ul>
-    </section>
-		<?php endif; ?>
+<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+    <?php
+    $args = array(
+        'post_type'      => 'sch-student',
+        'posts_per_page' => -1, 
+        'orderby'        => 'title',
+        'order'          => 'ASC',
+    );
+    $student_query = new WP_Query( $args );
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+    if ( $student_query->have_posts() ) : ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+        <div class="student-list">
+            <?php while ( $student_query->have_posts() ) : $student_query->the_post(); ?>
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+                
+                    <?php if ( has_post_thumbnail() ) : ?>
+                        <div class="student-thumbnail">
+						<?php the_post_thumbnail( 'student-thumbnail' ); ?>
 
-			endwhile;
+                        </div>
+                    <?php endif; ?>
 
-			the_posts_navigation();
+                
+                    <div class="student-excerpt">
+                        <?php the_excerpt(); ?>
+                    </div>
 
-		else :
+              
+                    <div class="student-taxonomy">
+                        <?php
+                        the_terms( get_the_ID(), 'sch-student-category', 'Category: ', ', ', '' );
+                        ?>
+                    </div>
+                </article>
+            <?php endwhile; ?>
+        </div>
 
-			get_template_part( 'template-parts/content', 'none' );
+    <?php else : ?>
+        <p>No students found.</p>
+    <?php endif; ?>
 
-		endif;
-		?>
-
-	</main><!-- #main -->
+    <?php wp_reset_postdata(); ?>
+</main>
 
 <?php
 get_sidebar();

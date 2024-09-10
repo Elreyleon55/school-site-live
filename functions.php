@@ -46,6 +46,12 @@ function school_theme_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
+
+/*
+    * student-thumbnail size
+	*/
+	add_image_size( 'student-thumbnail', 200, 300, true );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
@@ -222,6 +228,7 @@ add_action( 'wp_enqueue_scripts', 'fwd_scripts' );
 
 
 // add Block Editor template for Student CPT
+
 function sch_school_student_block_template() {
 
     $post_type_object = get_post_type_object('sch-student');
@@ -243,4 +250,14 @@ function sch_school_student_block_template() {
     $post_type_object->template_lock = 'all'; // locks all blocks
 }
 add_action( 'init', 'sch_school_student_block_template' );
+
+// Add student name
+function change_student_title_placeholder( $title ){
+    $screen = get_current_screen();
+    if ( 'sch-student' == $screen->post_type ) {
+        $title = 'Add student name';
+    }
+    return $title;
+}
+add_filter( 'enter_title_here', 'change_student_title_placeholder' );
 
