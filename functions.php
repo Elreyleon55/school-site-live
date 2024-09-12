@@ -46,7 +46,8 @@ function school_theme_setup() {
 		*/
 	add_theme_support( 'post-thumbnails' );
 
-
+	// adding theme support for wide images
+	add_theme_support( 'align-wide' );
 /*
     * student-thumbnail size
 	*/
