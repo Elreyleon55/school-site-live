@@ -1,7 +1,26 @@
+.container-header{
+	display: flex;
+  justify-content: space-around;
+  align-items: center;
+	gap: 32%;
+}
+
+.menu-main-nav-header-container{
+	color: white;
+	ul{
+		display: flex;
+		gap: 1rem;
+		justify-content: space-between;
+		a{
+			color: white;
+		}
+	}
+}
 .main-navigation {
 	display: block;
-	width: 100%;
-	
+	// width: 100%;
+	display: flex;
+	justify-content: right;
 
 	ul {
 		display: none;
@@ -23,7 +42,7 @@
 			}
 
 			li {
-
+	
 				&:hover > ul,
 				&.focus > ul {
 					display: block;
@@ -37,10 +56,12 @@
 
 			:hover > a,
 			.focus > a {
+				color: $color__background-hr;
 			}
 
 			a:hover,
 			a.focus {
+				color: $color__background-hr;
 			}
 		}
 
@@ -60,7 +81,7 @@
 
 	a {
 		display: block;
-		text-decoration: none;
+		
 	}
 
 	.current_page_item > a,
@@ -109,8 +130,19 @@
 	}
 }
 
+.site-branding{
+	.site-title{
+		color: $color__background-screen;
+		text-decoration: none;
+		a{
+			color: $color__background-body;
+		}
+	}
+}
+
 .site-header{
 	background-color: $color__text-input-focus;
+
 }
 .site-footer{
 	background-color: $color__text-input-focus;

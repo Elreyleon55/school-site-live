@@ -12,19 +12,28 @@
 
 ?>
 
+
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-theme' ) ); ?>">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'school-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
+				?><h2>Credits</h2><?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-theme' ), 'school-theme', '<a href="http://ezequiel.space">Ezequiel Mahdi</a>' );
+				printf( esc_html__( 'Created by: %1$s %2$s.', 'school-theme' ), '', '<a href="http://ezequiel.space">Ezequiel Mahdi</a>' );
 				?>
+			<p>Photos courtesy of <a href="https://burst.shopify.com/" target="_blank" rel="noopener">Burst</a>.</p>
+			<nav class="footer-nav">
+				<h2>Links</h2>
+				<div class="menu-footer-menu-container">
+					<ul id="menu-footer-menu" class="menu">
+						<li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
+							<a href="https://ezequiel.space/school-site-live/schedule/">Schedule</a>
+						</li>
+						<li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
+							<a href="https://ezequiel.space/school-site-live/news/">News</a>
+						</li>
+					</ul>
+				</div>		
+			</nav>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

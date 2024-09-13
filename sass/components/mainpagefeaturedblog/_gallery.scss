@@ -1,0 +1,26 @@
+.home-blog{
+ 
+  article{
+    display: flex;
+    gap: 3%;
+    align-items: center;
+    position: relative;
+  }
+  .article-title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0.7rem;
+      background-color: rgba($color__background-screen, 0.9);
+      color: $color__text-input-focus;
+      font-size: 90%;
+      text-align: center;
+    
+  }
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
