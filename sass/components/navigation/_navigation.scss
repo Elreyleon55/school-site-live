@@ -16,6 +16,7 @@
 		}
 	}
 }
+
 .main-navigation {
 	display: block;
 	// width: 100%;
@@ -91,10 +92,43 @@
 	}
 }
 
+// for the hamburger menu 
+.menu-toggle{
+	background-color: transparent;
+	padding: 0.3rem;
+		svg{
+		fill: $color__background-pre;
+		}
+}
+
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+		li{
+			background-color: $color__text-input-focus;
+			text-align: center;
+		}
+
+}
+.menu-toggle,
+.main-navigation.toggled{
+	.menu-main-nav-header-container{
+		position: absolute;
+		top: 7em;
+		left: 0;
+		width: 100%;
+	}
+	.sub-menu{
+		background-color: $color__text-input-focus;
+		width: 100%;
+	  display: flex;
+		gap: 0;
+		justify-content: center;
+		ul{
+			text-align: center;
+		}
+	}
 }
 
 @media screen and (min-width: 37.5em) {
@@ -105,6 +139,15 @@
 
 	.main-navigation ul {
 		display: flex;
+		.sub-menu{
+			background-color: $color__text-input-focus;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			gap: 0;
+			justify-content: center;
+		
+		}
 	}
 }
 

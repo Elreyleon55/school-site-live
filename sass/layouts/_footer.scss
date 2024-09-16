@@ -1,6 +1,15 @@
 .site-footer{
+  height: 100%;
   .site-info{
+    padding: 5%;
+    background-color: $color__border-abbr;
+    display: flex;
+    gap: 5%;
+    justify-content: space-around;
     color: $color__background-body;
+    .menu{
+      margin: 0;
+    }
     a{
       color: $color__background-button;
     }
