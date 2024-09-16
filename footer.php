@@ -12,24 +12,41 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'school-theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-theme' ), 'school-theme', '<a href="http://ezequiel.space">Ezequiel Mahdi</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+
+<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		<nav class="footer-logo">
+			<a href="https://ezequiel.space/school-site-live/" class="custom-logo-link" rel="home" aria-current="page"><img width="240" height="240" src="https://ezequiel.space/school-site-live/wp-content/uploads/2024/09/iconmonstr-cube-lined-240-1.png" class="custom-logo" alt="School Site Logo" decoding="async" srcset="https://ezequiel.space/school-site-live/wp-content/uploads/2024/09/iconmonstr-cube-lined-240-1.png 240w, https://ezequiel.space/school-site-live/wp-content/uploads/2024/09/iconmonstr-cube-lined-240-150x150.png 150w" sizes="(max-width: 240px) 100vw, 240px"></a>
+		</nav>
+		<?php
+		?>
+		<div class="container-credits">
+			<h2>Credits</h2>
+			<?php
+			/* translators: 1: Theme name, 2: Theme author. */
+			printf(esc_html__('CREATED BY: %1$s %2$s.', 'school-theme'), '', '<a href="http://ezequiel.space">Ezequiel Mahdi</a>');
+			?>
+			<p>Photos courtesy of <a href="https://burst.shopify.com/" target="_blank" rel="noopener">Burst</a>.</p>
+		</div>
+		<nav class="footer-nav">
+			<div class="menu-footer-menu-container">
+				<h2>Links</h2>
+				<ul id="menu-footer-menu" class="menu">
+					<li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
+						<a href="https://ezequiel.space/school-site-live/schedule/">Schedule</a>
+					</li>
+					<li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
+						<a href="https://ezequiel.space/school-site-live/news/">News</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
