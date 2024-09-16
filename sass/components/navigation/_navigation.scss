@@ -17,6 +17,7 @@
 	}
 }
 
+
 .main-navigation {
 	display: block;
 	// width: 100%;
@@ -172,15 +173,18 @@
 		flex: 1 0 50%;
 	}
 }
-
-.site-branding{
-	.site-title{
-		color: $color__background-screen;
-		text-decoration: none;
-		a{
-			color: $color__background-body;
-		}
-	}
+.site-header{
+			.custom-logo-link{
+				display: flex;
+			}
+			.site-title{
+				color: $color__background-screen;
+				text-decoration: none;
+				a{
+					color: $color__background-body;
+				}
+			}
+	
 }
 
 .site-header{
