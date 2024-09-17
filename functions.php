@@ -178,6 +178,21 @@ function school_theme_scripts()
 }
 add_action('wp_enqueue_scripts', 'school_theme_scripts');
 
+function enqueue_aos_library()
+{
+	if (is_singular('post') || is_post_type_archive('post') || is_home()) {
+		wp_enqueue_style('aos-css', get_template_directory_uri() . '/css/aos.css');
+		wp_enqueue_script('aos-js', get_template_directory_uri() . '/js/aos.js', array(), null, true);
+
+		wp_add_inline_script('aos-js', 'AOS.init();');
+	}
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_aos_library');
+
+
+
+
 /**
  * Implement the Custom Header feature.
  */
