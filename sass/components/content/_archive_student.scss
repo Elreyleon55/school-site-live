@@ -1,0 +1,56 @@
+// // .site {
+// //     max-width: 2200px;
+// //     margin: 0 auto;
+// //     overflow: hidden;
+    
+// //     grid-template-areas:
+// //         "header header header"
+// //         ". main ."
+// //         ". sidebar ."
+// //         "footer footer footer";
+// // }
+
+// // .site-main {
+// //     display: grid;
+// //     grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+// //     grid-area: main;
+// //     margin-top: 55px;
+// //     padding: 0 1rem;
+// // }
+
+// .site {
+//     max-width: 2200px;
+//     margin: 0 auto;
+//     overflow: hidden;
+//     display: grid;
+//     grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+//     grid-template-areas:
+//         "header header header"
+//         ". main ."
+//         ". sidebar ."
+//         "footer footer footer";
+// }
+
+// .site-main {
+//     grid-area: main;
+//     margin-top: 55px;
+//     padding: 0 1rem;
+// }
+
+// @media screen and (min-width: 50em) {
+//     .site-header {
+//         display: grid;
+//         grid-template-columns: 1fr minmax(auto, 12.5rem) minmax(auto, 50rem) 1fr;
+//         align-items: center;
+//     }
+// }
+
+
+@media only screen and (min-width: 37.5em) {
+    .student-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
