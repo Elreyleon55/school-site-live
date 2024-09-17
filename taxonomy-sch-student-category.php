@@ -15,7 +15,7 @@ get_header();
 	<?php if ( have_posts() ) : ?>
 
 <header class="page-header">
-	<h1 class="page-title"><?php single_term_title(); ?></h1> <!-- فقط عنوان تاکسونومی نمایش داده می‌شود -->
+	<h1 class="page-title"><?php single_term_title(); ?></h1> 
 </header><!-- .page-header -->
 
 <?php

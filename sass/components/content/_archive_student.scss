@@ -1,10 +1,52 @@
-
-
-@media only screen and (min-width: 37.5em) {
-    .student-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+/* استایل‌های Flexbox برای چیدمان سه‌تایی دانش‌آموزان */
+.student-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* فاصله بین آیتم‌ها */
+    gap: 2rem; /* فاصله بین کارت‌ها */
+    padding: 1rem;
 }
 
+.student-item {
+    flex-basis: calc(33.333% - 2rem); /* هر کارت یک‌سوم فضا را بگیرد */
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.student-thumbnail img {
+    width: 100%;
+    max-width: 250px; /* حداکثر عرض تصویر */
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.student-item h2 {
+    font-size: 1.25rem;
+    color: #305c9f;
+    margin-bottom: 0.5rem;
+}
+
+.student-excerpt {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.student-item a {
+    color: #305c9f;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.student-taxonomy {
+    font-weight: bold;
+    color: #305c9f;
+    margin-top: 0.5rem;
+}
