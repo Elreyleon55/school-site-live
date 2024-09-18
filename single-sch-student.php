@@ -28,7 +28,7 @@ get_header();
                 </div>
 
                 <div class="portfolio-button">
-                    <a href="#" class="button">View Portfolio</a>
+                    <!-- <a href="#" class="button">View Portfolio</a> -->
                 </div>
 
                 <?php
