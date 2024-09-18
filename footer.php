@@ -40,22 +40,17 @@
 			?>
 			<p>Photos courtesy of <a href="https://burst.shopify.com/" target="_blank" rel="noopener">Burst</a>.</p>
 			<?php
-			wp_nav_menu(array('theme_location' => 'footer-right'));
+			wp_nav_menu(array('theme_location' => 'footer-left'));
 			?>
 		</div>
 		<nav class="footer-nav">
 			<div class="menu-footer-menu-container">
 				<h2>Links</h2>
-				<ul id="menu-footer-menu" class="menu">
-					<li id="menu-item-334" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-334">
-						<a href="https://ezequiel.space/school-site-live/schedule/">Schedule</a>
-					</li>
-					<li id="menu-item-327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327">
-						<a href="https://ezequiel.space/school-site-live/news/">News</a>
-						<?php
-						wp_nav_menu(array('theme_location' => 'footer-right'));
-						?>
-					</li>
+
+				<?php
+				wp_nav_menu(array('theme_location' => 'footer-right'));
+				?>
+				</li>
 				</ul>
 			</div>
 		</nav>
