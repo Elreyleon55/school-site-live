@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying archive pages for students taxonomy
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -14,37 +14,46 @@ get_header();
 
 	<?php if ( have_posts() ) : ?>
 
-<header class="page-header">
-	<h1 class="page-title"><?php single_term_title(); ?></h1> 
-</header><!-- .page-header -->
+	<header class="page-header">
+		<h1 class="page-title"><?php single_term_title(); ?></h1> 
+	</header><!-- .page-header -->
 
-<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+	<?php
+		/* Start the Loop */
+		while ( have_posts() ) :
+			the_post();
+	?>
 
-        ?>
-        <article>
+	<article class="student-item">
         <a href="<?php the_permalink(); ?>">
             <h2><?php the_title(); ?></h2>
             <?php the_post_thumbnail( 'student-thumbnail' ); ?>
-
         </a>
-        </article>
-        <?php
-			endwhile;
 
-			the_posts_navigation();
+        <div class="student-description">
+            <?php the_content(); ?>
+        </div>
 
-		else :
+        <div class="portfolio-button">
+            <a href="<?php the_permalink(); ?>" class="button">
+            </a>
+        </div>
+    </article>
 
-			get_template_part( 'template-parts/content', 'none' );
+	<?php
+		endwhile;
 
-		endif;
-		?>
+		the_posts_navigation();
+
+	else :
+
+		get_template_part( 'template-parts/content', 'none' );
+
+	endif;
+	?>
 
 	</main><!-- #primary -->
 
 <?php
-
 get_footer();
+?>
