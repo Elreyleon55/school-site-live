@@ -24,19 +24,14 @@ get_header();
 			the_post();
 	?>
 
-	<article class="student-item">
+	<article class="student-box">
         <a href="<?php the_permalink(); ?>">
             <h2><?php the_title(); ?></h2>
             <?php the_post_thumbnail( 'student-thumbnail' ); ?>
         </a>
 
-        <div class="student-description">
+        <div class="student-taxonomy-description">
             <?php the_content(); ?>
-        </div>
-
-        <div class="portfolio-button">
-            <a href="<?php the_permalink(); ?>" class="button">
-            </a>
         </div>
     </article>
 
