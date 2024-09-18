@@ -288,3 +288,18 @@ function change_student_title_placeholder($title)
 	return $title;
 }
 add_filter('enter_title_here', 'change_student_title_placeholder');
+
+
+// Add staff placeholder
+function change_staff_title_placeholder( $title ) {
+    $screen = get_current_screen();
+
+
+    if ( 'sch-staff' == $screen->post_type ) {
+        $title = 'Add staff name';
+    }
+
+    return $title;
+}
+add_filter( 'enter_title_here', 'change_staff_title_placeholder' );
+
