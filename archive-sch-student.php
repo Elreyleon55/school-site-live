@@ -25,7 +25,7 @@ get_header();
 
         <div class="student-list">
             <?php while ( $student_query->have_posts() ) : $student_query->the_post(); ?>
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <article class="student-item" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 
                     <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
