@@ -31,14 +31,22 @@ get_header();
                     <a href="#" class="button">View Portfolio</a>
                 </div>
 
+                <?php
+                $terms = get_the_terms( get_the_ID(), 'sch-student-category' );
 
-                <h2>Meet other Designer students:</h2>
+                if ( $terms && ! is_wp_error( $terms ) ) {
+                    foreach ( $terms as $term ) {
+                        if ( $term->slug == 'designers' ) {
+                            echo '<h2>Meet other Designer students:</h2>';
+                        } elseif ( $term->slug == 'developer' ) {
+                            echo '<h2>Meet other Developer students:</h2>';
+                        }
+                    }
+                }
+                ?>
 
                 <div class="related-students">
                     <?php
-
-                    $terms = get_the_terms( get_the_ID(), 'sch-student-category' );
-
                     if ( $terms && ! is_wp_error( $terms ) ) {
                         foreach ( $terms as $term ) {
 
