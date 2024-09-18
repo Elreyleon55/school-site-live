@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package School_site
+ * @package School_site_Theme
  */
 
 get_header();
@@ -28,7 +28,6 @@ get_header();
                 </div>
 
                 <div class="portfolio-button">
-                    <!-- <a href="#" class="button">View Portfolio</a> -->
                 </div>
 
                 <?php
