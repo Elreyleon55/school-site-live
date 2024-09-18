@@ -24,3 +24,11 @@
     height: auto;
   }
 }
+
+@media (max-width: 50rem){
+  .home-blog{
+    article{
+      flex-direction: column;
+    }
+  }
+}
