@@ -1,4 +1,3 @@
-
 .student-list {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +7,7 @@
 }
 
 .student-item {
-    flex-basis: calc(33.333% - 2rem); 
+
     box-sizing: border-box;
     padding: 1.5rem;
     border: 1px solid #ddd;
@@ -49,4 +48,14 @@
     font-weight: bold;
     color: #305c9f;
     margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 37.5em){
+
+    
+    .student-item {
+        flex-basis: calc(33.333% - 2rem); 
+    
+    }
+    
 }
