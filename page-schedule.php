@@ -20,13 +20,18 @@ get_header();
     <?php if( have_rows('schedule_items') ): ?>
         <table class="schedule-table">
             <tbody>
-                <?php while( have_rows('schedule_items') ): the_row(); ?>
-                    <tr>
-                        <td><?php echo esc_html( get_sub_field('date') ); ?></td>
+                <?php 
+                $index = 0;
+                while( have_rows('schedule_items') ): the_row(); ?>
+                    <tr class="<?php echo ($index % 2 == 0) ? 'even-row' : 'odd-row'; ?>">
+                        <!-- Format date using date_i18n -->
+                        <td><?php echo date_i18n( 'F j, Y', strtotime(get_sub_field('date')) ); ?></td>
                         <td><?php echo esc_html( get_sub_field('course') ); ?></td>
                         <td><?php echo esc_html( get_sub_field('instructor') ); ?></td>
                     </tr>
-                <?php endwhile; ?>
+                <?php 
+                $index++;
+                endwhile; ?>
             </tbody>
         </table>
     <?php else: ?>
@@ -36,3 +41,4 @@ get_header();
 
 <?php
 get_footer();
+?>
