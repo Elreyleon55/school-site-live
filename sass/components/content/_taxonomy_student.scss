@@ -1,8 +1,8 @@
-/* تنظیمات عمومی برای لیست دانشجوها */
+
 .student-box {
     display: flex;
-    flex-direction: column; /* ستونی کردن آیتم‌ها */
-    align-items: flex-start; /* چپ‌چین کردن محتوا */
+    flex-direction: column;
+    align-items: flex-start;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     padding: 20px;
@@ -22,32 +22,34 @@
 }
 
 .student-box .student-thumbnail {
-    margin-bottom: 20px; /* فاصله از محتوای متن و دکمه */
+    margin-bottom: 20px; 
 }
 
 .student-box .student-thumbnail img {
-    max-width: 150px; /* حداکثر عرض تصویر */
+    width: 200px; 
+    height: 300px; 
     height: auto;
     display: block;
 }
 
-/* محتوای توضیحات هر آیتم */
+
 .student-taxonomy-description {
-    text-align: left; /* متن چپ‌چین */
+    text-align: left; 
     font-size: 1rem;
     margin-bottom: 20px;
     color: #555;
 }
 
-/* حالت دسکتاپ */
+
 @media screen and (min-width: 768px) {
     .student-box {
-        flex-direction: row; /* آیتم‌ها در کنار هم قرار بگیرند */
+        flex-direction: row; 
         align-items: center;
     }
 
     .student-box .student-thumbnail {
-        margin-right: 20px; /* فاصله بین عکس و متن */
+    
+        margin-right: 20px; 
         margin-bottom: 0;
     }
 

@@ -19,7 +19,6 @@
     background-color: #000000;
     border-top: 3px solid #305c9f;
     position: fixed;
-    top: 20px;
     left: 0;
     z-index: 1000;
     align-items: center;
@@ -47,13 +46,108 @@
     margin-top: auto;
 }
 
-
-.container-logo,
-.custom-logo-link {
-    width: 70px;
-    height: auto;
+.widget-area {
+    grid-area: sidebar;
 }
 
-a:visited {
+.aos-init a:visited,
+.entry-header a:visited,
+.aos-init a{
+ color: #000000;
+ }
+
+
+.post {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+
+.post h1, .post h2 {
+    font-size: 2rem;
+    color: #305c9f;
+    margin-bottom: 10px;
+}
+
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+
+.post-thumbnail {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.post-categories, .post-tags {
+    font-size: 0.9rem;
+    color: #305c9f;
+    margin-bottom: 10px;
+}
+
+.post-categories a, .post-tags a {
+    text-decoration: none;
+    color: #1e73be;
+}
+
+.post-categories a:hover, .post-tags a:hover {
+    text-decoration: underline;
+}
+
+
+.post-comments {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+
+.widget-area {
+    grid-area: sidebar;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+}
+
+.widget-area a{
     color: #000000;
 }
+
+.wp-block-group ul{
+    margin: 0;
+}
+
+
+@media screen and (min-width: 37.5em){
+
+    
+    .widget-area{
+        display: flex; 
+    
+    }
+    
+}
+
