@@ -116,7 +116,7 @@
 .main-navigation.toggled{
 	.menu-main-nav-header-container{
 		position: absolute;
-		top: 7em;
+		top: 6em;
 		left: 0;
 		width: 100%;
 	}
@@ -142,7 +142,7 @@
 		display: flex;
 		.sub-menu{
 			background-color: $color__text-input-focus;
-			width: 100%;
+			width: 150%;
 			display: flex;
 			flex-direction: column;
 			gap: 0;

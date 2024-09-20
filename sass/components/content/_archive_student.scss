@@ -18,11 +18,12 @@
 }
 
 .student-thumbnail img {
-    width: 100%;
-    max-width: 250px; 
-    height: auto;
+    width: 200px; /* تنظیم عرض دقیق */
+    height: 300px; /* تنظیم ارتفاع دقیق */
+    object-fit: cover; /* برای برش تصاویر بزرگ‌تر و حفظ نسبت */
     margin-bottom: 1rem;
 }
+
 
 .student-item h2 {
     font-size: 1.25rem;

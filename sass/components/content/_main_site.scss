@@ -19,7 +19,6 @@
     background-color: #000000;
     border-top: 3px solid #305c9f;
     position: fixed;
-    top: 20px;
     left: 0;
     z-index: 1000;
     align-items: center;
@@ -51,10 +50,6 @@
     grid-area: sidebar;
 }
 
-// a:visited {
-//     color: #000000;
-// }
-
 .aos-init a:visited,
 .entry-header a:visited,
 .aos-init a{
@@ -62,12 +57,6 @@
  }
 
 
-
-
-// /* جابجایی سایدبار به پایین */
-// /* استایل اصلی برای لیست پست‌ها */
-
-/* استایل هر پست */
 .post {
     width: 100%;
     border-bottom: 1px solid #ddd;
@@ -75,21 +64,21 @@
     margin-bottom: 20px;
 }
 
-/* استایل برای تایتل پست */
+
 .post h1, .post h2 {
     font-size: 2rem;
     color: #305c9f;
     margin-bottom: 10px;
 }
 
-// /* استایل برای نمایش تاریخ و نویسنده */
+
 .post-meta {
     font-size: 0.9rem;
     color: #777;
     margin-bottom: 10px;
 }
 
-/* استایل تصویر پست */
+
 .post-thumbnail {
     width: 100%;
     max-width: 600px;
@@ -102,14 +91,12 @@
     border-radius: 5px;
 }
 
-/* استایل برای خلاصه متن */
 .post-excerpt {
     font-size: 1rem;
     color: #555;
     margin-bottom: 20px;
 }
 
-/* استایل دسته‌بندی و تگ‌ها */
 .post-categories, .post-tags {
     font-size: 0.9rem;
     color: #305c9f;
@@ -125,14 +112,14 @@
     text-decoration: underline;
 }
 
-/* استایل برای کامنت‌ها */
+
 .post-comments {
     font-size: 0.9rem;
     color: #777;
     margin-bottom: 20px;
 }
 
-// /* استایل برای سایدبار */
+
 .widget-area {
     grid-area: sidebar;
     display: flex;
