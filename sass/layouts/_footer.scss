@@ -2,11 +2,10 @@
   height: 100%;
   padding: 0;
   .site-info{
-    padding: 5%;
+    padding: 1%;
     background-color: $color__border-abbr;
     display: flex;
-    gap: 5%;
-    justify-content: space-around;
+    justify-content: center;
     color: $color__background-body;
     .menu{
       margin: 0;
