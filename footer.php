@@ -36,7 +36,7 @@
 			<h2>Credits</h2>
 			<?php
 			/* translators: 1: Theme name, 2: Theme author. */
-			printf(esc_html__('CREATED BY: %1$s %2$s.', 'school-theme'), '', '<a href="http://ezequiel.space">Ezequiel Mahdi</a>');
+			printf(esc_html__('CREATED BY: %1$s %2$s.', 'school-theme'), '', '<a href="http://ezequiel.space">Ezequiel &amp; Mahdi</a>');
 			?>
 			<p>Photos courtesy of <a href="https://burst.shopify.com/" target="_blank" rel="noopener">Burst</a>.</p>
 		</div>

@@ -122,7 +122,6 @@
 
 .widget-area {
     grid-area: sidebar;
-    display: flex;
     justify-content: space-between;
     margin-top: 40px;
     width: 100%;
@@ -140,3 +139,15 @@
 .wp-block-group ul{
     margin: 0;
 }
+
+
+@media screen and (min-width: 37.5em){
+
+    
+    .widget-area{
+        display: flex; 
+    
+    }
+    
+}
+

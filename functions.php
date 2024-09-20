@@ -53,7 +53,7 @@ function school_theme_setup()
 	/*
     * student-thumbnail size
 	*/
-	add_image_size('student-thumbnail', 200, 300, false);
+	add_image_size('student-thumbnail', 200, 300, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
@@ -167,6 +167,14 @@ add_action('widgets_init', 'school_theme_widgets_init');
  */
 function school_theme_scripts()
 {
+
+	wp_enqueue_style(
+		'SCH-googlefonts', // unique handle
+		'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap',
+		array(),
+		null // version number, for google Fonts always set to null
+	);
+
 	wp_enqueue_style('school-theme-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('school-theme-style', 'rtl', 'replace');
 
@@ -231,26 +239,17 @@ if (defined('JETPACK__VERSION')) {
 /**
  * Enqueue scripts and styles.
  */
-function fwd_scripts()
-{
-	wp_enqueue_style(
-		'fwd-googlefonts', // unique handle
-		'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap',
-		array(),
-		null // version number, for google Fonts always set to null
-	);
+// function fwd_scripts()
+// {
+// 	wp_enqueue_style(
+// 		'fwd-googlefonts', // unique handle
+// 		'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap',
+// 		array(),
+// 		null // version number, for google Fonts always set to null
+// 	);
 
-	//add quote for later
-	// 	if (is_singular('post')) {
-	// 		// Enqueue your CSS file
-	// 		wp_enqueue_style('custom-post-css', get_template_directory_uri() . '/sass/css/_styles.scss');
-
-	// 		// Enqueue your JS file
-	// 		wp_enqueue_script('custom-post-js', get_template_directory_uri() . '/js/custom-post.js', array(), null, true);
-	// }
-
-}
-add_action('wp_enqueue_scripts', 'fwd_scripts');
+// }
+// add_action('wp_enqueue_scripts', 'fwd_scripts');
 
 
 // add Block Editor template for Student CPT
