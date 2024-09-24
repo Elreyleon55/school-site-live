@@ -1,0 +1,157 @@
+.site {
+    max-width: 2200px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+    grid-template-areas:
+        "header header header"
+        ". main ."
+        ". sidebar ."
+        "footer footer footer";
+    min-height: 100vh;
+}
+
+
+.site-header {
+    width: 100%;
+    height: 100px;
+    background-color: #000000;
+    border-top: 3px solid #305c9f;
+    position: fixed;
+    left: 0;
+    z-index: 1000;
+    align-items: center;
+}
+
+.container-header{
+	display: flex;
+  justify-content: space-around;
+  align-items: center;
+	gap: 15%;
+    margin-top: 1rem;
+}
+
+
+.site-main {
+    grid-area: main;
+    margin-top: 55px;
+    padding: 3rem 1rem;
+}
+
+.site-footer {
+    width: 100%;
+    grid-area: footer;
+    text-align: center;
+    margin-top: auto;
+}
+
+.widget-area {
+    grid-area: sidebar;
+}
+
+.aos-init a:visited,
+.entry-header a:visited,
+.aos-init a{
+ color: #000000;
+ }
+
+
+.post {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+
+.post h1, .post h2 {
+    font-size: 2rem;
+    color: #305c9f;
+    margin-bottom: 10px;
+}
+
+
+.post-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+
+.post-thumbnail {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.post-thumbnail img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.post-excerpt {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.post-categories, .post-tags {
+    font-size: 0.9rem;
+    color: #305c9f;
+    margin-bottom: 10px;
+}
+
+.post-categories a, .post-tags a {
+    text-decoration: none;
+    color: #1e73be;
+}
+
+.post-categories a:hover, .post-tags a:hover {
+    text-decoration: underline;
+}
+
+
+.post-comments {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+
+.widget-area {
+    grid-area: sidebar;
+    justify-content: space-between;
+    margin-top: 40px;
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+}
+
+.widget-area a{
+    color: #000000;
+}
+
+.wp-block-group ul{
+    margin: 0;
+}
+
+
+@media screen and (min-width: 37.5em){
+
+    
+    .widget-area{
+        display: flex; 
+    
+    }
+    
+}
+
+.h2{
+    font-weight: bold;
+}
+

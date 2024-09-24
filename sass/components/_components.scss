@@ -25,3 +25,25 @@
 /* Galleries
 --------------------------------------------- */
 @import "media/galleries";
+
+//featured blog posts
+
+@import "mainpagefeaturedblog/gallery";
+
+// archive student page
+
+@import "content/archive_student";
+
+// main style
+
+@import "content/main_site";
+
+
+@import "content/staff";
+
+@import "content/taxonomy_student";
+
+
+@import "content/single_student";
+
+@import "content/schedule"

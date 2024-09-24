@@ -1,0 +1,59 @@
+
+.student-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.student-box a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.student-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #305c9f;
+}
+
+.student-box .student-thumbnail {
+    margin-bottom: 20px; 
+}
+
+.student-box .student-thumbnail img {
+    width: 200px; 
+    height: 300px; 
+    height: auto;
+    display: block;
+}
+
+
+.student-taxonomy-description {
+    text-align: left; 
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+
+@media screen and (min-width: 768px) {
+    .student-box {
+        flex-direction: row; 
+        align-items: center;
+    }
+
+    .student-box .student-thumbnail {
+    
+        margin-right: 20px; 
+        margin-bottom: 0;
+    }
+
+    .student-box .student-taxonomy-description {
+        margin-left: 20px;
+    }
+}

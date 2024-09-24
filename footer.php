@@ -12,24 +12,51 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'school-theme' ) ); ?>">
+
+<footer id="colophon" class="site-footer">
+	<div class="site-info">
+		<nav class="footer-logo">
+			<a href="https://ezequiel.space/school-site-live/" class="custom-logo-link" rel="home" aria-current="page">
 				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'school-theme' ), 'WordPress' );
+				if (function_exists('the_custom_logo')) {
+				?>
+					<div class="footer-logo">
+						<?php
+						the_custom_logo();
+						?>
+					</div>
+				<?php
+				}
 				?>
 			</a>
-			<span class="sep"> | </span>
+		</nav>
+		<?php
+		?>
+		<div class="container-credits">
+			<h2>Credits</h2>
+			<?php
+			/* translators: 1: Theme name, 2: Theme author. */
+			printf(esc_html__('CREATED BY: %1$s %2$s.', 'school-theme'), '', '<a href="http://ezequiel.space">Ezequiel &amp; Mahdi</a>');
+			?>
+			<p>Photos courtesy of <a href="https://burst.shopify.com/" target="_blank" rel="noopener">Burst</a>.</p>
+		</div>
+		<nav class="footer-nav">
+			<div class="menu-footer-menu-container">
+				<h2>Links</h2>
+
 				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'school-theme' ), 'school-theme', '<a href="http://ezequiel.space">Ezequiel Mahdi</a>' );
+				wp_nav_menu(array('theme_location' => 'footer-right'));
 				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+				</li>
+				</ul>
+			</div>
+		</nav>
+	</div><!-- .site-info -->
+</footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

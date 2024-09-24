@@ -1,0 +1,110 @@
+.single-student-page {
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+
+.single-student-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 15px solid #ddd;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    flex-direction: row-reverse; 
+}
+
+
+.student-title {
+    flex: 1 1 100%;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #305c9f;
+}
+
+
+.single-student-thumbnail {
+    flex: 1;
+    width: 200px; 
+    height: 300px; 
+    margin-left: 20px; 
+    margin-bottom: 20px;
+}
+
+.single-student-thumbnail img {
+    width: 200px; 
+    height: 300px; 
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.single-student-content {
+    flex: 2;
+    text-align: left;
+    font-size: 1rem;
+    color: #555;
+}
+
+
+.related-title {
+    flex: 1 1 100%;
+    font-size: 1.5rem;
+    color: #305c9f;
+}
+
+
+.related-students-list {
+    flex: 1 1 100%;
+}
+
+.related-students {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.related-students .related-student-item {
+    margin-bottom: 10px;
+}
+
+.related-student-link {
+    text-decoration: none;
+    color: #305c9f;
+    font-weight: bold;
+}
+
+.related-student-link:hover {
+    color: #1e3d7a;
+    text-decoration: underline;
+}
+
+.single-portfolio-button a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #305c9f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.single-portfolio-button a:hover {
+    background-color: #1e3d7a;
+}
+
+
+@media screen and (max-width: 768px) {
+    .single-student-item {
+        flex-direction: column; 
+    }
+
+    .single-student-thumbnail {
+        width: 200px; 
+        height: 300px; 
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}
